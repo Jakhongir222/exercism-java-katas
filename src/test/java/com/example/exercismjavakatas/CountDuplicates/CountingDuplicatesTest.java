@@ -33,4 +33,23 @@ public class CountingDuplicatesTest {
 
         assertEquals(3, CountingDuplicates.duplicateCount(test));
     }
+    @Test
+    public void evenTests() {
+        assertEquals("es", CountingDuplicates.getMiddle("test"));
+        assertEquals("dd", CountingDuplicates.getMiddle("middle"));
+        assertEquals("o", CountingDuplicates.getMiddle("JakhOngir"));
+    }
+
+    @Test
+    public void oddTests() {
+        assertEquals("t", CountingDuplicates.getMiddle("testing"));
+        assertEquals("a", CountingDuplicates.getMiddle("A"));
+    }
+
+    @Test
+    public void sampleTest() {
+        assertEquals("SSttrriinngg",CountingDuplicates.doubleChar("String"));
+        assertEquals("HHeelllloo  WWoorrlldd",CountingDuplicates.doubleChar("Hello World"));
+        assertEquals("11223344!!__  ",CountingDuplicates.doubleChar("1234!_ "));
+    }
 }
