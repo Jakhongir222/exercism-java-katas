@@ -1,5 +1,7 @@
 package com.example.exercismjavakatas.BouncingBall;
 
+import java.util.Arrays;
+
 public class BouncingBall {
     public static int BouncingBall(double h, double bounce, double window) {
         int count = -1; //It is -1 because I am incrementing 2 times below, when it falls down it is shown once
@@ -10,5 +12,19 @@ public class BouncingBall {
             }
         }
         return count;
+    }
+
+    public static int[] minMax(int[] arr) {
+        int[] result = new int[2];
+        result[0] = Arrays.stream(arr).min().getAsInt();
+        result[1] = Arrays.stream(arr).max().getAsInt();
+        return result;
+    }
+
+    public static int roundToNext5(int number) {
+        if(number % 5 == 0) return number;
+        int rounded = (int) Math.ceil((double)number/5);
+        return 5*rounded;
+
     }
 }
