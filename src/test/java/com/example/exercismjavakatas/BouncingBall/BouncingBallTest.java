@@ -66,4 +66,9 @@ public class BouncingBallTest {
                                     BouncingBall.roundToNext5(testCase[0]));
                         });
     }
+
+    @Test
+    public void BasicTests() {
+        assertEquals(16, BouncingBall.sum(new int[] { 6, 2, 1, 8, 10}));
+    }
 }

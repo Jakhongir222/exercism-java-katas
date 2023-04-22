@@ -27,4 +27,16 @@ public class BouncingBall {
         return 5*rounded;
 
     }
+
+    public static int sum(int[] numbers){
+        int sum=0;
+        if (numbers == null || numbers.length == 0 ||numbers.length == 1) {
+            return 0;
+        }
+        numbers = Arrays.stream(numbers).sorted().toArray();
+        for(int i = 0; i<numbers.length; i++ ){
+            sum+=numbers[i];
+        }
+        return sum - (numbers[0] + numbers[numbers.length-1]);
+    }
 }
