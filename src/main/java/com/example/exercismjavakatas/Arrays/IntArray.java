@@ -21,10 +21,10 @@ public class IntArray {
         return array;
     }
 
-    public static List<Object> filterList (final List<Object> list){
+    public static List<Object> filterList(final List<Object> list) {
         List<Object> newList = new ArrayList<>();
-        for(Object obj: list){
-            if(obj instanceof Integer && (Integer)obj>=0){
+        for (Object obj : list) {
+            if (obj instanceof Integer && (Integer) obj >= 0) {
                 newList.add(obj);
             }
         }
