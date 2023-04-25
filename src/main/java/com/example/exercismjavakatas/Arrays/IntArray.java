@@ -1,9 +1,6 @@
 package com.example.exercismjavakatas.Arrays;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class IntArray {
 
@@ -23,4 +20,16 @@ public class IntArray {
         }
         return array;
     }
+
+    public static List<Object> filterList (final List<Object> list){
+        List<Object> newList = new ArrayList<>();
+        for(Object obj: list){
+            if(obj instanceof Integer && (Integer)obj>=0){
+                newList.add(obj);
+            }
+        }
+        return newList;
+    }
+
+
 }
