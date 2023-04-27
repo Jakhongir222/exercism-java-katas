@@ -28,4 +28,12 @@ public class IntArrayTest {
         assertEquals(List.of(1, 0, 15), IntArray.filterList(List.of(1, "a", "b", 0, 15)), "For input: [1, \"a\", \"b\", 0, 15]");
         assertEquals(List.of(1, 2, 123), IntArray.filterList(List.of(1, 2, "aasf", "1", "123", 123)), "For input: [1, 2, \"aasf\", \"1\", \"123\", 123]");
     }
+
+    private double precision = 1e-10;
+    @Test
+    public void sampleTests() {
+        assertArrayEquals(new double []{1,1,1,3,5,9,17,31,57,105}, IntArray.tribonacci(new double []{1,1,1},10), precision);
+        assertArrayEquals(new double []{0,0,1,1,2,4,7,13,24,44}, IntArray.tribonacci(new double []{0,0,1},10), precision);
+        assertArrayEquals(new double []{0,1,1,2,4,7,13,24,44,81}, IntArray.tribonacci(new double []{0,1,1},10), precision);
+    }
 }

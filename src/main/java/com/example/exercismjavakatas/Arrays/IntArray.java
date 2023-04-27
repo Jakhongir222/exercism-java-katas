@@ -31,5 +31,18 @@ public class IntArray {
         return newList;
     }
 
+    public static double[] tribonacci(double[] s, int n) {
+        double[] newArray = new double[n];  // Uzunligi ndan kichik bölishi kerak
+        for (int i = 0; i < n; i++) {
+            if (i < 3) {     // boshidagi 3 rqamni uzi turishi kerak
+                newArray[i] = s[i];
+            } else {
+                newArray[i] = newArray[i-1] + newArray[i-2] + newArray[i-3];  // Fibanacciga öxshab qöshayapmiz bu yerd
+            }
+        }
+        return newArray;
+    }
+
+
 
 }
