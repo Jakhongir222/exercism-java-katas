@@ -13,7 +13,7 @@ public class Persist {
                 int digit = Character.getNumericValue(numStr.charAt(i));
                 product *= digit;
             }
-            num = product;  // assigning new value for the number and starting over
+            num = product;  // Assigning new value for the number and starting over
             count++;
         }
         return count;
@@ -26,7 +26,7 @@ public class Persist {
         }
         for(int i=0; i<str.length(); i++){
             char c = str.charAt(i);
-            map.put(c, map.getOrDefault(c, 0) + 1); // increment count for character, Map.getOrDefault
+            map.put(c, map.getOrDefault(c, 0) + 1); // Increment count for character, Map.getOrDefault
             // it will get the correct incremented number or by default O and adds 1
         }
         return map;
