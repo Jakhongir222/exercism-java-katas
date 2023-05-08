@@ -31,4 +31,13 @@ public class Persist {
         }
         return map;
     }
+
+    public static double find_average(int[] array){
+        int sum=0;
+        for(int i=0; i<array.length; i++){
+            sum+=array[i];
+        }
+        double average = (double) sum / array.length; // need to calculate outside the for loop
+        return average;
+    }
 }
