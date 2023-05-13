@@ -11,7 +11,6 @@ public class DiamondPrinter {
             String empty = ".";
             String repeated = empty.repeat(n-1);
             String newString = repeated+"A"+repeated;
-
         }
 return null;
     }

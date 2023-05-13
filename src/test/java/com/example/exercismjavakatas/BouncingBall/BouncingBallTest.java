@@ -71,4 +71,14 @@ public class BouncingBallTest {
     public void BasicTests() {
         assertEquals(16, BouncingBall.sum(new int[] { 6, 2, 1, 8, 10}));
     }
+
+    @Test
+    public void shouldWorkForSomeExamples() throws Exception {
+        assertEquals("negative numbers aren't square numbers", false, BouncingBall.isSquare(-1));
+        assertEquals("0 is a square number (0 * 0)",    true,   BouncingBall.isSquare(0));
+        assertEquals("3 isn't a square number", false,  BouncingBall.isSquare(3));
+        assertEquals("4 is a square number (2 * 2)",    true,   BouncingBall.isSquare(4));
+        assertEquals("25 is a square number (5 * 5)",   true,   BouncingBall.isSquare(25));
+        assertEquals("26 isn't a square number",false,  BouncingBall.isSquare(26));
+    }
 }

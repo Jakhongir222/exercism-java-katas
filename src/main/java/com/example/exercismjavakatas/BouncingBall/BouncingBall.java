@@ -39,4 +39,12 @@ public class BouncingBall {
         }
         return sum - (numbers[0] + numbers[numbers.length-1]);
     }
+
+    public static boolean isSquare(int n) {
+        if(n>=0){
+            int sqr = (int) Math.sqrt(n);
+            return ((sqr * sqr) ==n);
+        }
+        return false;
+    }
 }
