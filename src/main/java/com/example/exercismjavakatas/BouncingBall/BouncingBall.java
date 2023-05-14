@@ -47,4 +47,12 @@ public class BouncingBall {
         }
         return false;
     }
+
+    public static long findNextSquare(long sq) {
+        long sqr = (long) Math.sqrt(sq); //Cast (long) when long argument passed, (int) when int argument passed
+        if((sqr*sqr)==sq){
+            return (sqr+1)*(sqr+1);
+        }
+        return -1;
+    }
 }

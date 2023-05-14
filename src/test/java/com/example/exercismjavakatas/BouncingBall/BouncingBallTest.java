@@ -81,4 +81,18 @@ public class BouncingBallTest {
         assertEquals("25 is a square number (5 * 5)",   true,   BouncingBall.isSquare(25));
         assertEquals("26 isn't a square number",false,  BouncingBall.isSquare(26));
     }
+    @Test
+    public void whenItIs12() {
+        assertEquals(144, BouncingBall.findNextSquare(121));
+    }
+
+    @Test
+    public void whenItis26() {
+        assertEquals(676, BouncingBall.findNextSquare(625));
+    }
+
+    @Test
+    public void whenItIsMinus1() {
+        assertEquals(-1, BouncingBall.findNextSquare(114));
+    }
 }
