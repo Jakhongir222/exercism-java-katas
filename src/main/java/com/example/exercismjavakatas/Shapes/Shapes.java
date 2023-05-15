@@ -1,5 +1,7 @@
 package com.example.exercismjavakatas.Shapes;
 
+import java.util.Arrays;
+
 public class Shapes {
     // find the sum of the internal angles in given n polygon
     public static int sumOfAngles(int n) {
@@ -19,6 +21,16 @@ public class Shapes {
             }
         }
         return new int[]{sum1, sum2};
+    }
+
+    public static int [][] multiplicationTable(int n){
+        int [][] table =new int[n][n];
+        for(int i=0; i<=n; i++){
+            for(int j=0; j<n; j++){
+                table[i][j]=(i+1)*(j+1);
+            }
+        }
+        return table;
     }
 
 
