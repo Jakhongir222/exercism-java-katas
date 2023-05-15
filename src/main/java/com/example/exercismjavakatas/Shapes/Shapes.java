@@ -6,4 +6,22 @@ public class Shapes {
         if(n<=2){ throw new IllegalArgumentException("It is not possible to make shape with 2 or less sides");}
         return (n-2)*180;
     }
+
+    // in a row there numbers, sort them into 2 arrays and sum them together
+    public static int[] rowWeights (final int[] weights) {
+        int sum1=0;
+        int sum2=0;
+        for(int i=0;i< weights.length; i++){
+            if(i%2==0){
+                sum1+=weights[i];
+            }else{
+                sum2+=weights[i];
+            }
+        }
+        return new int[]{sum1, sum2};
+    }
+
+
+
+
 }
