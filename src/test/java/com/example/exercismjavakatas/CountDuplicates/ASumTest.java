@@ -23,4 +23,9 @@ public class ASumTest {
         assertEquals(3568, ASum.findNb(40539911473216L));
     }
 
+    @Test
+    public void testEvaporatorOne() {
+        assertEquals(22 , ASum.evaporator(10, 10, 10));
+    }
+
 }

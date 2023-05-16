@@ -13,4 +13,15 @@ public class ASum {
         }
         return -1;
     }
+
+    public static int evaporator(double content, double evap_per_day, double threshold) {
+        int n = 0;
+        double thresholdContent = threshold * 0.01 * content;
+
+        while (content > thresholdContent) {
+            content -= (evap_per_day * 0.01 * content);
+            n++;
+        }
+        return n;
+    }
 }
