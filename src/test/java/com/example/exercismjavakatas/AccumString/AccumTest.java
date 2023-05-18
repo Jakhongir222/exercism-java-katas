@@ -17,4 +17,19 @@ public class AccumTest {
         testing(Accum.accum("EvidjUnokmM"), "E-Vv-Iii-Dddd-Jjjjj-Uuuuuu-Nnnnnnn-Oooooooo-Kkkkkkkkk-Mmmmmmmmmm-Mmmmmmmmmmm");
         testing(Accum.accum("HbideVbxncC"), "H-Bb-Iii-Dddd-Eeeee-Vvvvvv-Bbbbbbb-Xxxxxxxx-Nnnnnnnnn-Cccccccccc-Ccccccccccc");
     }
+    @Test
+    public void sampleTests() {
+        assertEquals("taxi", Accum.high("man i need a taxi up to ubud"));
+        assertEquals("volcano", Accum.high("what time are we climbing up to the volcano"));
+        assertEquals("semynak", Accum.high("take me to semynak"));
+    }
+
+    @Test
+    public void edgeCaseTests() {
+        assertEquals("aa", Accum.high("aa b"));
+        assertEquals("b", Accum.high("b aa"));
+        assertEquals("bb", Accum.high("bb d"));
+        assertEquals("d", Accum.high("d bb"));
+        assertEquals("aaa", Accum.high("aaa b"));
+    }
 }

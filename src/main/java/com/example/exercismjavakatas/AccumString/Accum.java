@@ -1,5 +1,7 @@
 package com.example.exercismjavakatas.AccumString;
 
+import java.util.Arrays;
+
 public class Accum {
     public static String accum(String s) {
         StringBuilder formatted = new StringBuilder();
@@ -16,5 +18,27 @@ public class Accum {
             }
         }
         return formatted.toString();
+    }
+
+    public static String high(String s) {
+        String[] words = s.split(" ");
+
+        int maxSum = 0;
+        String wordWithMaxSum = "";
+
+        for (String word : words) {
+            int wordSum = 0;
+            for (char c : word.toCharArray()) {
+                if (Character.isLetter(c)) {
+                    int charValue = Character.toLowerCase(c) - 'a' + 1;
+                    wordSum += charValue;
+                }
+            }
+            if (wordSum > maxSum) {
+                maxSum = wordSum;
+                wordWithMaxSum = word;
+            }
+        }
+        return wordWithMaxSum;
     }
 }
