@@ -45,7 +45,7 @@ public class Accum {
     }
 
     public static String mouthSize(String animal){
-        if(animal.equalsIgnoreCase("alligator")){
+        if(animal.equalsIgnoreCase("alligator")){  //we can shorten the str.toLowerCase() and str.equals() with str.equalsIgnoreCase()
             return "small";
         }
         return "wide";
