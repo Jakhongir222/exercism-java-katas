@@ -50,4 +50,22 @@ public class Accum {
         }
         return "wide";
     }
+    public static String replace(final String s) {
+        return s.replaceAll("[aeiouAEIOU]", "!");  // don't forget the bracets
+    }
+
+    public static int arithmetic(int a, int b, String operator) {
+        switch (operator.toLowerCase()) {
+            case "add":
+                return a + b;
+            case "subtract":
+                return a - b;
+            case "multiply":
+                return a * b;
+            case "divide":
+                return a / b;
+            default:
+                throw new IllegalArgumentException("Invalid operator: " + operator);
+        }
+    }
 }
