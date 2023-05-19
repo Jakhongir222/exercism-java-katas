@@ -30,7 +30,9 @@ public class Accum {
             int wordSum = 0;
             for (char c : word.toCharArray()) {
                 if (Character.isLetter(c)) {
-                    int charValue = Character.toLowerCase(c) - 'a' + 1;
+                    int charValue = Character.toLowerCase(c) - 'a' + 1; // This is because the ASCII value of 'a' is 97,
+                    // and subtracting 'a' from 'a' will yield 0, 'b' from 'a' will yield 1, 'c' from 'a' will yield 2,
+                    // and so forth.
                     wordSum += charValue;
                 }
             }
@@ -40,5 +42,12 @@ public class Accum {
             }
         }
         return wordWithMaxSum;
+    }
+
+    public static String mouthSize(String animal){
+        if(animal.equalsIgnoreCase("alligator")){
+            return "small";
+        }
+        return "wide";
     }
 }

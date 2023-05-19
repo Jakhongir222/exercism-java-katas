@@ -32,4 +32,12 @@ public class AccumTest {
         assertEquals("d", Accum.high("d bb"));
         assertEquals("aaa", Accum.high("aaa b"));
     }
+
+    @Test
+    public void fixedTests() {
+        assertEquals("wide", Accum.mouthSize("toucan"));
+        assertEquals("wide",Accum.mouthSize("ant bear"));
+        assertEquals("small", Accum.mouthSize("alligator"));
+        assertEquals("small", Accum.mouthSize("ALLIGATOR"));
+    }
 }
