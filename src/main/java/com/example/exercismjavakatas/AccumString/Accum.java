@@ -68,4 +68,19 @@ public class Accum {
                 throw new IllegalArgumentException("Invalid operator: " + operator);
         }
     }
+
+    public static int sequence(int[] arr) {
+        int maxSumSoFar=0;
+        int endingHere=0;
+        if(arr.equals(null)) return 0;
+        for(int i=0; i<arr.length; i++){
+            if(arr[i]>maxSumSoFar){
+                arr[i]+=maxSumSoFar;
+            }
+            if((maxSumSoFar+arr[i])<0) return endingHere;
+        }
+        return maxSumSoFar;
+    }
+
+
 }
