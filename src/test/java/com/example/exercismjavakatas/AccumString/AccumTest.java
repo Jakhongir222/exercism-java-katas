@@ -40,4 +40,12 @@ public class AccumTest {
         assertEquals("small", Accum.mouthSize("alligator"));
         assertEquals("small", Accum.mouthSize("ALLIGATOR"));
     }
+    @Test
+    public void testEmptyArray() throws Exception {
+        assertEquals("Empty arrays should have a max of 0", 0, Accum.sequence(new int[]{}));
+    }
+    @Test
+    public void testExampleArray() throws Exception {
+        assertEquals("Example array should have a max of 6", 6, Accum.sequence(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
+    }
 }

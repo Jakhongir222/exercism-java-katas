@@ -70,15 +70,17 @@ public class Accum {
     }
 
     public static int sequence(int[] arr) {
-        int maxSumSoFar=0;
-        int endingHere=0;
-        if(arr.equals(null)) return 0;
-        for(int i=0; i<arr.length; i++){
-            if(arr[i]>maxSumSoFar){
-                arr[i]+=maxSumSoFar;
-            }
-            if((maxSumSoFar+arr[i])<0) return endingHere;
+        if (arr.length == 0) {
+            return 0;
         }
+        int maxSumSoFar = arr[0];  // first element of the array
+        int endingHere = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            endingHere = Math.max(arr[i], endingHere + arr[i]);  //Math.max(8,5) javobi 8 buladi eng kattasi oladi taqqoslab
+            maxSumSoFar = Math.max(maxSumSoFar, endingHere);  // bu yerda birinchi da turgaidan kattami deb boshlanadi va taqqoslaydi
+        }
+        if(maxSumSoFar<0) return 0;
         return maxSumSoFar;
     }
 
