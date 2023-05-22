@@ -43,4 +43,12 @@ public class ShapesTest {
         assertArrayEquals(new int[]{150,151}, Shapes.rowWeights(new int[]{100,51,50,100}));
         assertArrayEquals(new int[]{207,235}, Shapes.rowWeights(new int[]{39,84,74,18,59,72,35,61}));
     }
+
+    private static final double DELTA = 1e-15;
+    @Test
+    public void basicTests() {
+        assertEquals(1.62, Shapes.squareArea(2),DELTA);
+        assertEquals(0, Shapes.squareArea(0),DELTA);
+        assertEquals(80, Shapes.squareArea(14.05),DELTA);
+    }
 }

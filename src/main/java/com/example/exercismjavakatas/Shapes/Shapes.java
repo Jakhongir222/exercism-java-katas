@@ -1,6 +1,9 @@
 package com.example.exercismjavakatas.Shapes;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.Arrays;
+import java.util.Locale;
 
 public class Shapes {
     // find the sum of the internal angles in given n polygon
@@ -31,6 +34,14 @@ public class Shapes {
             }
         }
         return table;
+    }
+
+    public static double squareArea(double A){
+        double radius = 2*A/(Math.PI);
+        DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.US);
+        DecimalFormat decimalFormat = new DecimalFormat("#.##", symbols);
+        double formattedArea = Double.parseDouble(decimalFormat.format(radius*radius));
+        return formattedArea;
     }
 
 
