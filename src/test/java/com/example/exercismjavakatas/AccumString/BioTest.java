@@ -28,4 +28,25 @@ public class BioTest {
         String s = "733049910872815764";
         testing(Bio.revRot(s, 5), "330479108928157");
     }
+
+    @Test
+    void replaceLowercaseVowels() {
+        assertEquals("hll", Bio.shortcut("hello"));
+        assertEquals("hw r y tdy?", Bio.shortcut("how are you today?"));
+        assertEquals("cmpln", Bio.shortcut("complain"));
+        assertEquals("nvr", Bio.shortcut("never"));
+    }
+
+    @Test public void test4a() {
+        assertEquals("aaaa", Bio.repeatStr(4, "a"));
+    }
+    @Test public void test3Hello() {
+        assertEquals("HelloHelloHello", Bio.repeatStr(3, "Hello"));
+    }
+    @Test public void test5empty() {
+        assertEquals("", Bio.repeatStr(5, ""));
+    }
+    @Test public void test0kata() {
+        assertEquals("", Bio.repeatStr(0, "kata"));
+    }
 }

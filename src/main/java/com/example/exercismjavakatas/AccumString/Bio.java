@@ -48,4 +48,17 @@ public class Bio {
         return sum;
     }
 
+
+    public static String shortcut(String input) {
+        return input.replaceAll("[aeiou]", "");
+    }
+
+    public static String repeatStr(final int repeat, final String string) {
+        String newString ="";   // or I can just use return string.repeat(repeat);
+        for(int i=0; i<repeat; i++){
+            newString+=string;
+        }
+        return newString;
+    }
+
 }
