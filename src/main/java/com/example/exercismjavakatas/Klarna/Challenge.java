@@ -5,38 +5,24 @@ import java.util.List;
 
 public class Challenge {
     public static List<Integer> whoIsGoingHomeEarly(int n, int k) {
-        List<Integer> result = new ArrayList<>();
-
-        // Create a list of workers numbered from 1 to n
         List<Integer> workers = new ArrayList<>();
         for (int i = 1; i <= n; i++) {
             workers.add(i);
         }
 
-        int current = k - 1; // Index of the current worker
-
-        while (workers.size() > n / 2) {
-            // Add the worker's number to the result
-            result.add(workers.get(current));
-
-            // Remove the worker from the list
-            workers.remove(current);
-
-            // Update the current index for the next round
-            current = (current + k - 1) % workers.size();
-            current++; // Move to the next position
+        List<Integer> homeEarly = new ArrayList<>();
+        int index = 0;
+        double half = Math.round((double) n / 2);
+        for(int j=0; j<n; j++){
+            if(workers.size()>half){
+                index=(index+k)% workers.size();
+                homeEarly.add(workers.get(index));
+                workers.remove(index);
+            }
         }
-
-        return result;
+        return homeEarly;
     }
 }
-
-
-
-
-
-
-
 
 
 
